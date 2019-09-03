@@ -1,0 +1,12 @@
+{
+  "name": "question2vk",
+  "version": "1.0.0",
+  "main": "question2vk.js",
+  "keywords": [],
+  "author": "incdapp",
+  "license": "ISC",
+  "description": "Question2Vk",
+  "dependencies": {
+    "easyvk": "^2.5.1"
+  }
+}
