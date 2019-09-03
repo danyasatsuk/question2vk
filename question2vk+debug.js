@@ -73,6 +73,7 @@ const whatisnode = () => {
           {otvet: ans}
         ]
         fs.writeFileSync('./files/user/io.json', JSON.stringify(jsonparsing, null, 2))
+        console.log(jsonparsing)
         console.log(`Ответ записан: ${answer}`);
         resolve()
       } else if (answer === 'n') {
@@ -81,6 +82,7 @@ const whatisnode = () => {
           {otvet: ans}
         ]
         fs.writeFileSync('./files/user/io.json', JSON.stringify(jsonparsing, null, 2))
+        console.log(jsonparsing)
         console.log(`Ответ записан: ${answer}`);
         resolve()
       } else {
@@ -102,6 +104,7 @@ const name = () => {
       var ans = answer
       const str = fs.readFileSync('./files/user/io.json', 'utf8');
       const line = str.split('name')[1];
+      console.log(line)
       if (line === undefined) {
         var jsonparsing = JSON.parse(fs.readFileSync('./files/user/io.json', 'utf-8'))
         jsonparsing.push({name: ans})
@@ -113,6 +116,7 @@ const name = () => {
         fs.writeFileSync('./files/user/io.json', JSON.stringify(jsonparsing, null, 2))
       }
       var jsonparsing = JSON.parse(fs.readFileSync('./files/user/io.json', 'utf-8'))
+      console.log(jsonparsing)
       console.log(`Ответ записан: ${answer}`)
       resolve()
 }})})}
@@ -127,6 +131,7 @@ const age = () => {
       var ans = answer
       const str = fs.readFileSync('./files/user/io.json', 'utf8');
       const line = str.split('age')[1];
+      console.log(line)
       if (isNaN(ans)) {
         console.log('Ой, произошла неурядица и ты случайно ввел не число')
         rl.close()
@@ -142,6 +147,7 @@ const age = () => {
         fs.writeFileSync('./files/user/io.json', JSON.stringify(jsonparsing, null, 2))
       }
       var jsonparsing = JSON.parse(fs.readFileSync('./files/user/io.json', 'utf-8'))
+      console.log(jsonparsing)
       console.log(`Ответ записан: ${answer}`)
       resolve()
     }
@@ -160,6 +166,7 @@ const sex = () => {
       var sexes = true
       const str = fs.readFileSync('./files/user/io.json', 'utf8');
       const line = str.split('sex')[1];
+      console.log(line)
       if (line === undefined) {
         var jsonparsing = JSON.parse(fs.readFileSync('./files/user/io.json', 'utf-8'))
         jsonparsing.push({sex: sexes})
@@ -171,12 +178,14 @@ const sex = () => {
         fs.writeFileSync('./files/user/io.json', JSON.stringify(jsonparsing, null, 2))
       }
       var jsonparsing = JSON.parse(fs.readFileSync('./files/user/io.json', 'utf-8'))
+      console.log(jsonparsing)
       console.log(`Ответ записан: ${answer}`)
       resolve()
     } else if (answer === 'ж') {
     var sexes = false
     const str = fs.readFileSync('./files/user/io.json', 'utf8');
     const line = str.split('sex')[1];
+    console.log(line)
     if (line === undefined) {
       var jsonparsing = JSON.parse(fs.readFileSync('./files/user/io.json', 'utf-8'))
       jsonparsing.push({sex: sexes})
@@ -188,6 +197,7 @@ const sex = () => {
       fs.writeFileSync('./files/user/io.json', JSON.stringify(jsonparsing, null, 2))
     }
     var jsonparsing = JSON.parse(fs.readFileSync('./files/user/io.json', 'utf-8'))
+    console.log(jsonparsing)
     console.log(`Ответ записан: ${answer}`)
     resolve()
   } else {
@@ -207,6 +217,7 @@ const year = () => {
       var ans = answer
       const str = fs.readFileSync('./files/user/io.json', 'utf8');
       const line = str.split('year')[1];
+      console.log(line)
       if (isNaN(ans)) {
         console.log('Ой, произошла неурядица и ты случайно ввел не число')
         rl.close()
@@ -222,6 +233,7 @@ const year = () => {
         fs.writeFileSync('./files/user/io.json', JSON.stringify(jsonparsing, null, 2))
       }
       var jsonparsing = JSON.parse(fs.readFileSync('./files/user/io.json', 'utf-8'))
+      console.log(jsonparsing)
       console.log(`Ответ записан: ${answer}`)
       resolve()}
     }})
