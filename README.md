@@ -98,7 +98,7 @@ var token = JSON.parse(fs.readFileSync('./config.json', 'utf-8')) //чтение
             if (jsonparsing[2].sex = true) {
               var sex = 'вы мужчина'
             } else {
-              var sex = 'вы женчина'
+              var sex = 'вы женщина'
             }
             var mess = 'Вас зовут ' + jsonparsing[1].name + ', вам ' + jsonparsing[2].age + ' лет, сейчас ' + jsonparsing[3].year + ' год, ' + nodemess + ', и ' + sex + '.' //сообщение
             let { vkr } = await vk.call('messages.send', { //вызов vk.call('messages.send')
